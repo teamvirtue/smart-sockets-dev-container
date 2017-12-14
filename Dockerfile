@@ -11,13 +11,16 @@ ARG DRED_URL
 
 USER root
 
-RUN conda install --quiet --yes \
+RUN conda install --yes \
     'pip' \
     'pytables' && \
     pip install coveralls \
     hmmlearn==0.1.1 \
     psycopg2 \
     future \
+    pvlib \
+    netcdf4 \
+    siphon \
     git+https://github.com/nilmtk/nilm_metadata.git#egg=nilm_metadata \
     git+https://github.com/nilmtk/nilmtk.git#egg=nilmtk && \
     conda clean -tipsy && \
