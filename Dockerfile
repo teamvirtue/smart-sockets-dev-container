@@ -12,7 +12,8 @@ ARG DRED_URL
 USER root
 
 RUN conda install --quiet --yes \
-    'pip' && \
+    'pip' \
+    'pytables' && \
     pip install coveralls \
     hmmlearn==0.1.1 \
     psycopg2 \
