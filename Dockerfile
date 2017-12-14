@@ -16,6 +16,7 @@ RUN conda install --quiet --yes \
     pip install coveralls \
     hmmlearn==0.1.1 \
     psycopg2 \
+    future \
     git+https://github.com/nilmtk/nilm_metadata.git#egg=nilm_metadata \
     git+https://github.com/nilmtk/nilmtk.git#egg=nilmtk && \
     conda clean -tipsy && \
